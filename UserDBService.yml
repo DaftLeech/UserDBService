@@ -1,0 +1,18 @@
+template: Hello, %s!
+defaultName: Stranger
+
+server:
+  adminMinThreads: 1
+  adminMaxThreads: 64
+  applicationConnectors:
+    - type: http
+      port: 18183
+  adminConnectors:
+    - type: http
+      port: 18184
+
+metrics:
+  reporters:
+    - type: console
+      timeZone: UTC
+      output: stdout
